@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{668DA0CA-90D6-1160-2231-0E0256BA5527}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abiogenesis3d.Shared", "Abiogenesis3d.Shared.csproj", "{810156F7-5BBD-F2F9-A18D-617EF2507A36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Campfire", "Campfire.csproj", "{2D9FD722-4D95-455A-CE7C-394ED736EA2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{668DA0CA-90D6-1160-2231-0E0256BA5527}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668DA0CA-90D6-1160-2231-0E0256BA5527}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668DA0CA-90D6-1160-2231-0E0256BA5527}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668DA0CA-90D6-1160-2231-0E0256BA5527}.Release|Any CPU.Build.0 = Release|Any CPU
+		{810156F7-5BBD-F2F9-A18D-617EF2507A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{810156F7-5BBD-F2F9-A18D-617EF2507A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{810156F7-5BBD-F2F9-A18D-617EF2507A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{810156F7-5BBD-F2F9-A18D-617EF2507A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D9FD722-4D95-455A-CE7C-394ED736EA2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D9FD722-4D95-455A-CE7C-394ED736EA2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D9FD722-4D95-455A-CE7C-394ED736EA2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D9FD722-4D95-455A-CE7C-394ED736EA2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

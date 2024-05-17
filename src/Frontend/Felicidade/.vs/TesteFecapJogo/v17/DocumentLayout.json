@@ -1,0 +1,136 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\jogoods\\jogoods\\testefecapjogo\\assets\\scenes\\scripts economia\\economia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts economia\\economia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\assets\\scenes\\jogo\\recursos_player\\propriedades_jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\jogo\\recursos_player\\propriedades_jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\assets\\scenes\\testemissao\\script\\missoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\missoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\jogoods\\jogoods\\testefecapjogo\\assets\\scenes\\testemissao\\script\\coletou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\coletou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\assets\\scenes\\testemissao\\script\\sistemanpcsecundario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\sistemanpcsecundario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\assets\\scenes\\testemissao\\script\\sistemanpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\sistemanpc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\assets\\scenes\\jogo\\npcs\\npc_ia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B7FE1318-BF7A-7461-DC48-A6BB3D97F545}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\jogo\\npcs\\npc_ia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Economia.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAywCsAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T17:30:08.534Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PROPRIEDADES_JOGADOR.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "RelativeToolTip": "Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T21:14:44.683Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SistemaNPCSecundario.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\SistemaNPCSecundario.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\SistemaNPCSecundario.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\SistemaNPCSecundario.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\SistemaNPCSecundario.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-01T19:22:05.441Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SistemaNPC.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\SistemaNPC.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\SistemaNPC.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\SistemaNPC.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\SistemaNPC.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwA8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T21:40:59.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Coletou.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAAA8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T21:26:14.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Missoes.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T21:52:00.836Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NPC_IA.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\JOGO\\NPCs\\NPC_IA.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\JOGO\\NPCs\\NPC_IA.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\JOGOODS\\JOGOODS\\TesteFecapJogo\\Assets\\Scenes\\JOGO\\NPCs\\NPC_IA.cs",
+              "RelativeToolTip": "Assets\\Scenes\\JOGO\\NPCs\\NPC_IA.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAAAwAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T20:01:38.814Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

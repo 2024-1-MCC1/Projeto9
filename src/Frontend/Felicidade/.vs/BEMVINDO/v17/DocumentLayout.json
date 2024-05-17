@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\bemvindo\\bemvindo\\assets\\scenes\\jogo\\recursos_player\\propriedades_jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\jogo\\recursos_player\\propriedades_jogador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\bemvindo\\bemvindo\\assets\\scenes\\testemissao\\script\\missoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\missoes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\bemvindo\\bemvindo\\assets\\scenes\\scripts economia\\economia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\scripts economia\\economia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|c:\\users\\iurym\\downloads\\bemvindo\\bemvindo\\assets\\scenes\\testemissao\\script\\coletou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{668DA0CA-90D6-1160-2231-0E0256BA5527}|Assembly-CSharp.csproj|solutionrelative:assets\\scenes\\testemissao\\script\\coletou.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PROPRIEDADES_JOGADOR.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "RelativeToolTip": "Assets\\Scenes\\JOGO\\RECURSOS_PLAYER\\PROPRIEDADES_JOGADOR.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:57:34.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Coletou.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\Coletou.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:39:14.751Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Economia.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "RelativeToolTip": "Assets\\Scenes\\Scripts Economia\\Economia.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAQwC8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:27:12.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Missoes.cs",
+              "DocumentMoniker": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "RelativeDocumentMoniker": "Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "ToolTip": "C:\\Users\\iurym\\Downloads\\BEMVINDO\\BEMVINDO\\Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "RelativeToolTip": "Assets\\Scenes\\TesteMissao\\Script\\Missoes.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAAAFQAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-04T15:06:48.743Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
