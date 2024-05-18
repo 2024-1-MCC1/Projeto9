@@ -39,6 +39,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
     private bool conversando = false;
 
     private Missoes MissaoObjeto;
+	private Animator animator;
 
     //--------------------CONVENCER NPC--------------------------
     public int CHANCE = 25;
@@ -100,6 +101,11 @@ public class NPC_IA : MonoBehaviour, IInteractable
     private void Start()
     {
         MissaoObjeto = GameObject.Find("MissaoGameObject").GetComponent<Missoes>();
+		
+		if(anda)
+		{
+			animator = this.gameObject.GetComponent<Animator>();
+		}
 
         JOGADOR = GameObject.Find("Scavenger Variant");
         NPC = this.gameObject;
@@ -160,6 +166,10 @@ public class NPC_IA : MonoBehaviour, IInteractable
             cansaco = UnityEngine.Random.Range(1, 11);
             recuperacao = UnityEngine.Random.Range(1, 11);
             direction = UnityEngine.Random.Range(0, 361);
+			if(anda)
+			{
+				animator.SetInteger("andando", 1);
+			}
             cicloAndar = true;
         }
 
@@ -168,6 +178,10 @@ public class NPC_IA : MonoBehaviour, IInteractable
         if(cansaco < 0)
         { 
             recuperacao -= Time.deltaTime;
+			if(anda)
+			{
+				animator.SetInteger("andando", 0);
+			}
             if(recuperacao < 0)
             {
                 cicloAndar = false;

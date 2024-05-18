@@ -142,9 +142,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 913845681951795218}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: b7c035cdee4609f4689888a8474b63b7, type: 3}
-  m_Controller: {fileID: 9100000, guid: 62283de8ca021c34aa5e61353fb9a6f4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 29957b4bf0763c84193dac65ac1f636c, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -227,6 +227,14 @@ MonoBehaviour:
   - 
   temMissao: 0
   anda: 1
+  ultimaMissao1ou2: 1
+  velocidade: 1
+  cansaco: 0
+  andando: 1
+  objetivo: 0
+  CHANCE: 25
+  GATILHO: 0
+  TENTATIVA: 0
 --- !u!114 &-7363164153039366275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,6 +256,7 @@ MonoBehaviour:
   selecionarOqueFazer: 0
   comecouPrincipal: 0
   tipoMissao: 0
+  missaoAcabou: 0000000000000000000000000000000000000000
 --- !u!114 &-8368655671906282216
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,9 +274,11 @@ MonoBehaviour:
   objetivoFinalMissaoInte: 0
   dinheiroMissao: 0
   respeitoGanho: 0
+  respeitoNecessario: 0
   idMissao: 0
   selecionarOqueFazer: 0
   tempoParaOFinal: 0
+  eAleatoria: 0
   tipoMissao: 1
 --- !u!1 &944684095800602908
 GameObject:

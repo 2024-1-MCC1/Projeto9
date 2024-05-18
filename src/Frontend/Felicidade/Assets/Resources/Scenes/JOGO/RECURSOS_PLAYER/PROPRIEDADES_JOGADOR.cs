@@ -25,7 +25,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     private static bool auxConversa = true;
 
     private static float imposto = 100;
-    private static float tempoParaPagarImposto = 200;
+    private static float tempoParaPagarImposto = 20;
 	private static bool taLento = false;
 	private bool entrouNoMenu = true;
 
@@ -214,7 +214,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
         {
             tempoParaPagarImposto += Time.time;
             dinheiro -= imposto;
-            Debug.Log($"O tempo passou e tá na hora de pagar 100 Reals para o prefeito Naconta, você ficou com {dinheiro}");
+            ORQUESTRA.DICAS($"O tempo passou e tá na hora de pagar 100 Reals para o prefeito Naconta, você ficou com {dinheiro}");
         }
 
     }

@@ -11,9 +11,11 @@ public class SistemaNPCSecundario : MonoBehaviour
     public int objetivoFinalMissaoInte = 0;//Inserir a quantidade de tarefas que o jogador tem que alcançar para concluir a missão
     public float dinheiroMissao;
 	public float respeitoGanho;
+	public float respeitoNecessario;
     public int idMissao; //Usado para identificar a missão 
     public int selecionarOqueFazer;//"Coleta de Lixo"(0), "Arborização"(1), "Varrer as ruas"(0)
 	public float tempoParaOFinal;
+	public bool eAleatoria = false;
 
 	public int tipoMissao = 1; //(0) é para missões principais e (1) é para missões secundarias
     private SistemaNPCPrincipal sistemaNPCPrincipal;
@@ -30,6 +32,10 @@ public class SistemaNPCSecundario : MonoBehaviour
         {
             this.gameObject.GetComponent<SistemaNPCSecundario>().enabled = false;//Desativa o Script no gameobject em que ele está inserido
         }
+		if(eAleatoria && respeitoNecessario == PROPRIEDADES_JOGADOR.respeito)
+		{
+			InteragiuSecundario();
+		}
     }
 
     public void InteragiuSecundario()
