@@ -4,9 +4,9 @@
 <a href= "https://www.fecap.br/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhZPrRa89Kma0ZZogxm0pi-tCn_TLKeHGVxywp-LXAFGR3B1DPouAJYHgKZGV0XTEf4AE&usqp=CAU" alt="FECAP - Fundação de Comércio Álvares Penteado" border="0"></a>
 </p>
 
-# Nome do Projeto
+# Felicidade
 
-## Nome do Grupo
+## Sustentáveis
 
 ## Integrantes: <a href="https://github.com/IuryXa">Iury Xavier da Silva Mangueira</a>, <a href="https://github.com/BernardoSeijas">Bernardo Seijas Cavalcante</a>, <a href="https://github.com/lilianconde">Lilian Mercedes Paye Conde</a>, <a href="https://www.linkedin.com/in/victorbarq/">Leonardo Santos da Silva</a>
 
@@ -15,8 +15,7 @@
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<a href="https://ibb.co/4M3tccN"><img src="https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png" alt="Teste-Fecap-Jogo-17-05-2024-23-06-56" border="0"></a>
 </p>
 
 
@@ -63,7 +62,8 @@ Há também 4 pastas que seguem da seguinte forma:
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
+Extraia os arquivos RAR na pasta executáveis
+Encontre o TesteFecapJogo.exe na pasta e execute-o como qualquer outro programa.
 
 <b>HTML:</b>
 
