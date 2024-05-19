@@ -18,13 +18,7 @@
 <a href="https://ibb.co/4M3tccN"><img src="https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png" alt="Teste-Fecap-Jogo-17-05-2024-23-06-56" border="0"></a>
 </p>
 
-
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
-<br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
+Felicidade é um jogo que busca conscientizar sobre o a importância de políticas sustentáveis para o desenvolvimento urbano, baseado nos Objetivos de Desenvolvimento sustentável (ODS), em especial a ODS11, Cidades e Comunidades Sustentáveis. Em nosso jogo o jogador, ao retornar a sua terra natal, descobre que a sua cidade está em um estado alarmante, poluída e repleta de problemas sociais. O objetivo do jogador será limpar a cidade e restaurar a sua antiga beleza, promovendo a sustentabilidade. 
 
 ## 🛠 Estrutura de pastas
 
@@ -72,34 +66,49 @@ Encontre o index.html na pasta executáveis e execute-o como uma página WEB (at
 
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Para abrir este projeto é necessario instalar a Unity e o Visual Studio, ambos disponíveis abaixo.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://unity.com/pt/download">Unity</a>
+-<a href="https://visualstudio.microsoft.com/pt-br/downloads/">Visual Studio</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
 
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 16/05/2024
+    * Cenário engrandecido
+    * Mais eventos da história adicionados
+    * Finalização das dinâmicas de gameplay
+    * Correção de Bugs
+* 10/05/2024
+    * Adição de eventos da história
+    * Adição da trilha sonora
+    * Adicionamos mais detalhes no cenário
+    * Cenário engrandecido
+* 07/05/2024
+    * Correção de Bugs
+    * Adição de animações aos NPCS
+    * Adicionamos mais mecânicas de interação
+* 25/04/2024
+    * Adicionamos as dinâmicas de jogo, permitindo que o jogador interaja e conclua missões
+    * Adicionamos a névoa que limita a visão do jogador
+    * Criação do sistema de movimentação dos NPCS
+    * Criação do menu principal
+* 12/04/2024
+    * Concertamos erros no sistema de missões
+    * Criação do sistema de diálogos
+    * Colisão de objetos no cenário adicionada
+* 05/04/2024
+    * Criação do Cenário
+    * Criação da movimentação do jogador
+    * Criação do sistema de missões
+* 22/03/2024
+    * Primeira Versão do jogo na Unity
+* 15/03/2024
+    * Planejamento inicial do projeto
 
 ## 📋 Licença/License
 
@@ -109,8 +118,47 @@ A cada atualização os detalhes devem ser lançados aqui.
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://creativecommons.org/share-your-work/>
-4. <https://freesound.org/>
-5. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+Pesquisa sobre o tema:
+1. https://brasil.un.org/pt-br/sdgs/11
+2. https://www.pensamentoverde.com.br/sustentabilidade/portland-supera-registros-poluicao-passado-torna-exemplo-cidade-verde/
+3. https://www.jusbrasil.com.br/artigos/cubatao-de-vale-da-morte-a-modelo-de-recuperacao-ambiental-e-desenvolvimento-sustentavel/698169580
+4. https://www.pensamentoverde.com.br/sustentabilidade/historia-poluicao-cubatao-cidade-deixou-vale-morte/
+5. https://memoria.bn.br/DocReader/DocReader.aspx?bib=153931_05&Pesq=%22vale%20da%20morte%22&pagfis=838
+6. https://memoria.bn.br/DocReader/DocReader.aspx?bib=153931_05&Pesq=%22vale%20da%20morte%22&pagfis=3065
+
+Cenário
+1. https://assetstore.unity.com/packages/3d/environments/abandoned-buildings-62875
+2. https://assetstore.unity.com/packages/3d/environments/cabin-environment-98014
+3. https://assetstore.unity.com/packages/3d/environments/urban/brick-house-74214
+4. https://assetstore.unity.com/packages/3d/props/low-poly-simple-medieval-props-258397
+5. https://assetstore.unity.com/packages/3d/props/waste-can-pbr-224775
+6. https://assetstore.unity.com/packages/3d/props/rusty-pack-models-14412
+7. https://assetstore.unity.com/packages/3d/environments/industrial/barrels-63623
+8. https://assetstore.unity.com/packages/3d/props/exterior/street-lamps-2-260395
+9. https://assetstore.unity.com/packages/3d/environments/industrial/rpg-fps-game-assets-for-pc-mobile-industrial-set-v3-0-101429
+10. https://assetstore.unity.com/packages/3d/vegetation/trees/dry-trees-86967
+11. https://assetstore.unity.com/packages/3d/environments/urban/low-poly-street-pack-67475
+12. https://assetstore.unity.com/packages/3d/props/pbr-cardboard-box-110635
+13. https://assetstore.unity.com/packages/vfx/shaders/ultra-skybox-fog-115414
+14. https://assetstore.unity.com/packages/3d/props/industrial/prop-pack-30963
+15. https://assetstore.unity.com/packages/3d/props/exterior/upixelator-campfire-3d-pixel-art-277510
+16. https://assetstore.unity.com/packages/3d/environments/fantasy/tent-pack-19370
+17. https://assetstore.unity.com/packages/3d/props/furniture/raw-wooden-furniture-free-166329
+18. https://assetstore.unity.com/packages/tools/modeling/mess-maker-free-213803
+19. https://assetstore.unity.com/packages/3d/props/industrial/prop-pack-30963
+20. https://assetstore.unity.com/packages/3d/food-props-163295
+21. https://assetstore.unity.com/packages/3d/props/exterior/old-road-signs-pbr-170952
+22. https://assetstore.unity.com/packages/3d/props/food/rpg-food-props-demo-248712
+
+NPCS
+1. https://assetstore.unity.com/packages/3d/characters/city-people-lite-260446
+2. https://assetstore.unity.com/packages/3d/characters/humanoids/humans/free-scavenger-261065
+3. https://assetstore.unity.com/packages/3d/characters/humanoids/humans/man-character-80-s-273883
+
+Audio
+1. https://assetstore.unity.com/packages/audio/ambient/urban/free-general-ambience-sounds-246000
+2. https://assetstore.unity.com/packages/audio/sound-fx/foley/footsteps-essentials-189879
+3. https://pixabay.com/
+4. https://mixkit.co/free-sound-effects/game/?page=2
+5. https://www.freesfx.co.uk/
+6. https://opengameart.org/content/dark-forest-theme
