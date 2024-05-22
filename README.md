@@ -8,17 +8,18 @@
 
 ## Sustentáveis
 
-## Integrantes: <a href="https://github.com/IuryXa">Iury Xavier da Silva Mangueira</a>, <a href="https://github.com/BernardoSeijas">Bernardo Seijas Cavalcante</a>, <a href="https://github.com/lilianconde">Lilian Mercedes Paye Conde</a>, <a href="https://www.linkedin.com/in/victorbarq/">Leonardo Santos da Silva</a>
+## Integrantes: <a href="https://github.com/IuryXa">Iury Xavier da Silva Mangueira</a>, <a href="https://github.com/BernardoSeijas">Bernardo Seijas Cavalcante</a>, <a href="https://github.com/lilianconde">Lilian Mercedes Paye Conde</a>, <a href="https://github.com/Leonardoss23">Leonardo Santos da Silva</a>
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Prof. Victor Bruno Alexander Rosetti de Queiroz</a>
+## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Prof. Victor Bruno Alexander Rosetti de Queiroz</a>, <a href="https://www.linkedin.com/in/fabiano-on%C3%A7a-3214a12/">Prof. Fabiano Onça</a>, <a href="https://www.linkedin.com/in/adriano-valente-534576135/">Prof. Adriano Valente</a>
 
 ## Descrição
 
 <p align="center">
 <a href="https://ibb.co/4M3tccN"><img src="https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png" alt="Teste-Fecap-Jogo-17-05-2024-23-06-56" border="0"></a>
+Felicidade by <a href="https://github.com/IuryXa">Iury Xavier da Silva Mangueira</a>, <a href="https://github.com/BernardoSeijas">Bernardo Seijas Cavalcante</a>, <a href="https://github.com/lilianconde">Lilian Mercedes Paye Conde</a>, <a href="https://github.com/Leonardoss23">Leonardo Santos da Silva</a> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> <a xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/2024-1-MCC1/Projeto9">Felicidade</a> by <span property="cc:attributionName">Iury Xavier da Silva Mangueira, Lilian Mercedes Paye Conde, Bernardo Seijas Cavalcante, Leonardo Santos da Silva</span> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""></a>
 </p>
 
-Felicidade é um jogo que busca conscientizar sobre o a importância de políticas sustentáveis para o desenvolvimento urbano, baseado nos Objetivos de Desenvolvimento sustentável (ODS), em especial a ODS11, Cidades e Comunidades Sustentáveis. Em nosso jogo o jogador, ao retornar a sua terra natal, descobre que a sua cidade está em um estado alarmante, poluída e repleta de problemas sociais. O objetivo do jogador será limpar a cidade e restaurar a sua antiga beleza, promovendo a sustentabilidade. 
+Felicidade é um jogo que busca conscientizar sobre o a importância de políticas sustentáveis para o desenvolvimento urbano, baseado nos Objetivos de Desenvolvimento sustentável (ODS), em especial a ODS11, Cidades e Comunidades Sustentáveis. Em nosso jogo o jogador, ao retornar a sua terra natal, descobre que a sua cidade está em um estado alarmante, poluída e repleta de problemas sociais. O objetivo do jogador será limpar a cidade e restaurar a sua antiga beleza, promovendo a sustentabilidade.
 
 ## 🛠 Estrutura de pastas
 
@@ -37,11 +38,7 @@ Felicidade é um jogo que busca conscientizar sobre o a importância de polític
   &emsp;|-->Frontend<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
 <b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
 
 <b>documentos</b>: Toda a documentação estará nesta pasta.
 
@@ -59,11 +56,6 @@ Não há instalação! Apenas executável!
 Extraia os arquivos RAR na pasta executáveis
 Encontre o TesteFecapJogo.exe na pasta e execute-o como qualquer outro programa.
 
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-
 ## 💻 Configuração para Desenvolvimento
 
 Para abrir este projeto é necessario instalar a Unity e o Visual Studio, ambos disponíveis abaixo.
@@ -71,6 +63,7 @@ Para abrir este projeto é necessario instalar a Unity e o Visual Studio, ambos 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
 -<a href="https://unity.com/pt/download">Unity</a>
+
 -<a href="https://visualstudio.microsoft.com/pt-br/downloads/">Visual Studio</a>
 
 
