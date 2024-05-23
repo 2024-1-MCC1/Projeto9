@@ -15,7 +15,8 @@
 ## Descrição
 
 <p align="center">
-href="https://ibb.co/4M3tccN"><img src="https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png" alt="Teste-Fecap-Jogo-17-05-2024-23-06-56" border="0">
+<img src="https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png" alt="Teste-Fecap-Jogo-17-05-2024-23-06-56" border="0">
+
   Game by <a href="https://github.com/2024-1-MCC1/Projeto9">Sustentáveis</a> <a rel="license" href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1">CC BY 4.0</a>
 </p>
 
