@@ -117,8 +117,8 @@ Pesquisa sobre o tema:
 2. https://www.pensamentoverde.com.br/sustentabilidade/portland-supera-registros-poluicao-passado-torna-exemplo-cidade-verde/
 3. https://www.jusbrasil.com.br/artigos/cubatao-de-vale-da-morte-a-modelo-de-recuperacao-ambiental-e-desenvolvimento-sustentavel/698169580
 4. https://www.pensamentoverde.com.br/sustentabilidade/historia-poluicao-cubatao-cidade-deixou-vale-morte/
-5. https://memoria.bn.br/DocReader/DocReader.aspx?bib=153931_05&Pesq=%22vale%20da%20morte%22&pagfis=838
-6. https://memoria.bn.br/DocReader/DocReader.aspx?bib=153931_05&Pesq=%22vale%20da%20morte%22&pagfis=3065
+5. http://memoria.bn.gov.br/DocReader/153931_06/838
+6. http://memoria.bn.gov.br/DocReader/153931_06/3065
 
 Cenário
 1. https://assetstore.unity.com/packages/3d/environments/abandoned-buildings-62875
