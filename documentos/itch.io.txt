@@ -1,0 +1,9 @@
+Título: Felicidade
+
+Descrição curta: Felicidade busca conscientizar sobre a importância do desenvolvimento urbano sustentável.
+
+Descrição longa: Felicidade é um jogo que busca conscientizar sobre o a importância de políticas sustentáveis para o desenvolvimento urbano, baseado nos Objetivos de Desenvolvimento sustentável (ODS), em especial a ODS11, Cidades e Comunidades Sustentáveis. Em nosso jogo, o jogador, ao retornar a sua terra natal, descobre que a sua cidade está em um estado alarmante, poluída e repleta de problemas ambientais. O objetivo do jogador será limpar a cidade e restaurar a sua antiga beleza, promovendo a sustentabilidade.
+
+Tags: 3D, simulation, survival, sustentabilidade, singleplayer, unity
+
+Link para imagem cover: https://i.ibb.co/MpQSbbN/Teste-Fecap-Jogo-17-05-2024-23-06-56.png
