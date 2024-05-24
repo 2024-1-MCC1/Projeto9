@@ -10,7 +10,7 @@ public class LIXAO : MonoBehaviour
     private NPC_IA PREFEITO;
     private GameObject CAMERA;
 
-    private int escur = 9; //ALTERAR ESSE VALOR PARA 0 APÓS AS MODIFICAÇÕES!
+    private int escur = 0; //ALTERAR ESSE VALOR PARA 0 APÓS AS MODIFICAÇÕES!
     public bool comecaAux = false;
 
     private GameObject CAMINHAO;

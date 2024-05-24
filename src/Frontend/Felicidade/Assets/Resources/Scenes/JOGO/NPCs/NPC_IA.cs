@@ -11,6 +11,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
     public string[] dialogo = new string[3];
     public string[] falante = new string[3];
 	public bool temMissao = false;
+	public bool missaoDePegarQuest = false;
 	public bool anda = true;
 	public int ultimaMissao1ou2 = 1;
 
@@ -45,6 +46,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
     public int CHANCE = 25;
     public int GATILHO;
     public bool TENTATIVA = false;
+	private GameObject SETA;
 
     //--------------------DOENÇAS-------------------
     private bool LIBERADOENTE = false;
@@ -79,6 +81,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
             this.andando = false;
 
             SC_FPSController.canMove = false;
+			Time.timeScale = 0;
             if (NPC.gameObject.name != "PREFEITO")
             { NPC.transform.forward = JOGADOR.transform.forward * (-1); } //VIRA O NPC EM DIREÇÃO AO JOGADOR}
 
@@ -109,6 +112,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
 
         JOGADOR = GameObject.Find("Scavenger Variant");
         NPC = this.gameObject;
+		SETA = GameObject.Find("SETA");
 		
 		if(anda == false)
 		{
@@ -145,7 +149,12 @@ public class NPC_IA : MonoBehaviour, IInteractable
             //Debug.Log(this.gameObject.name);
             CONVERSANDO();
         }
-
+		
+		if(temMissao && this.gameObject.GetComponent<SistemaNPCPrincipal>().idMissao == MissaoObjeto.idMissaoAtual[0] + ultimaMissao1ou2)
+		{
+			objetivo = true;
+		}
+		
         if(objetivo)
         {
             PROPRIEDADES_JOGADOR.ATRAIR_SETA(this.gameObject);
@@ -245,11 +254,14 @@ public class NPC_IA : MonoBehaviour, IInteractable
                     if (MissaoObjeto.idMissaoAtual[0] == this.gameObject.GetComponent<SistemaNPCPrincipal>().idMissao - ultimaMissao1ou2 && MissaoObjeto.taNaHoraPro == true)
                     {
                         Debug.Log("foimeo");
+						objetivo = false;
+						if(missaoDePegarQuest == false){SETA.SetActive(false);}
                         sistemaNPCPrincipal.Interacao();
                         temMissao = false;
                     }
                 }
                 SC_FPSController.canMove = true;
+				Time.timeScale = 1;
                 if (this.anda) { this.andando = true; }
                 this.conversando = false;
                 this.andamentoDaConversa = -10;

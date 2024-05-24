@@ -1,4 +1,0 @@
-O que testar:
-
-1)Eventos principais
-2)NPC_Seguidor

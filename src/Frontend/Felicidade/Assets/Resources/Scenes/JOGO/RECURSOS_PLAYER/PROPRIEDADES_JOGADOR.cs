@@ -25,7 +25,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     private static bool auxConversa = true;
 
     private static float imposto = 100;
-    private static float tempoParaPagarImposto = 20;
+    private static float tempoParaPagarImposto = 800;
 	private static bool taLento = false;
 	private bool entrouNoMenu = true;
 
@@ -138,12 +138,12 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
 
                 ATRIBUTOSNATELA();
               
-                if (MISSAO.missaoLayout[0].activeSelf || MISSAO.missaoLayout[1].activeSelf || PESOATUAL > PESOLIMITE) { SETA.SetActive(true); } else { SETA.SetActive(false); }
+                //if (MISSAO.missaoLayout[0].activeSelf || MISSAO.missaoLayout[1].activeSelf || PESOATUAL > PESOLIMITE) { SETA.SetActive(true); } else { SETA.SetActive(false); }
 
             }
             else if (SETA.activeSelf)
             {
-                SETA.SetActive(false);
+                SETA.SetActive(true);
             }
 
             if (OBJETIVO != null)
@@ -243,21 +243,21 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     }
 	public void MenuPausado()
 	{
-		Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
-		if(Input.GetButtonDown("Fire1"))
+		if(Input.GetKey(KeyCode.Return))
 		{
 			entrouNoMenu = true;
 			MenuPausa.SetActive(false);
 			Time.timeScale = 1;
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
-		}else if(Input.GetButtonDown("Fire1") && EventSystem.current.currentSelectedGameObject.name == "VoltaMenu")
+		}else if(Input.GetKey(KeyCode.F))
 		{
 			entrouNoMenu = true;
 			MenuPausa.SetActive(false);
 			Time.timeScale = 1;
 			SceneManager.LoadScene("Menu");
+			Cursor.lockState = CursorLockMode.None;
+			Cursor.visible = true;
 		}
 	}
 

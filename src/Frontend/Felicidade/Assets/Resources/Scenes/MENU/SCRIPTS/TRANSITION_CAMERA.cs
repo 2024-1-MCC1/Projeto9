@@ -7,7 +7,8 @@ public class TRANSITION_CAMERA : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.None;
+		Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -15,7 +16,7 @@ public class TRANSITION_CAMERA : MonoBehaviour
     {
         if (this.gameObject.transform.position.x < -4.2)
         {
-            this.gameObject.transform.Translate(0, 0, 0.0001f);
+            this.gameObject.transform.Translate(0, 0, 0.005f);
             if (Input.GetMouseButtonDown(0))
             {
                 this.gameObject.transform.position = new Vector3(-4.2f, 0.48f, -7.38f);

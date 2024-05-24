@@ -31,6 +31,7 @@ public class Missoes : MonoBehaviour
 	private bool temTempo = false;
 	private AudioSource MissaoConcluida;
 	private AudioSource GameOver;
+	private GameObject SETA;
 
     public int[] tipoDeMissao = new int[2]; //(1) para missões de conversa
 
@@ -52,6 +53,7 @@ public class Missoes : MonoBehaviour
 		MissaoConcluida = GameObject.Find("MissaoConcluidaSound").GetComponent<AudioSource>();
 		GameOver = GameObject.Find("GameOverSound").GetComponent<AudioSource>();
         Tempo.SetActive(false);
+		SETA = GameObject.Find("SETA");
         //desentupirLayout.SetActive(false);
         missaoLayout[0].SetActive(false);
         missaoLayout[1].SetActive(false);
@@ -89,6 +91,14 @@ public class Missoes : MonoBehaviour
         }
         if (progressoMissao[tipoMissaoAtual] == objetivoFinalMissao[tipoMissaoAtual])
         {
+			if(tipoMissaoAtual == 0 && idMissaoAtual[0] == 9)
+			{
+				GameObject.Find("Lixo").SetActive(false);
+			}
+			if(tipoMissaoAtual == 0)
+			{
+				SETA.SetActive(true);
+			}
 			MissaoConcluida.Play(0);
 			taNaHoraPro = true;
 			temTempo=false;

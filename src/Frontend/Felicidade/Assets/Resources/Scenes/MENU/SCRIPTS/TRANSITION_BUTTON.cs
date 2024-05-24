@@ -11,11 +11,14 @@ public class TRANSITION_BUTTON : MonoBehaviour
     public bool jogar = false;
     public static bool creditos = false;
     public bool voltar = false;
+	public bool sair = false;
+	
+	private Vector3 posicao;
 
     // Start is called before the first frame update
     void Start()
     {
-
+		posicao = new Vector3(0.324f,-0.55f,-4.25f);
         
 
     }
@@ -23,6 +26,10 @@ public class TRANSITION_BUTTON : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		if(this.gameObject.transform.position.y < -0.55 && this.gameObject.name == "Sair_Button")
+		{
+			this.gameObject.transform.position = posicao;
+		}
 
         if ((this.gameObject.transform.position.y < 1.25 && this.gameObject.name == "Jogar_Button") || (this.gameObject.transform.position.y < 0.35 && this.gameObject.name == "Creditos_Button"))
         {
@@ -31,7 +38,7 @@ public class TRANSITION_BUTTON : MonoBehaviour
         if (jogar == true)
         {     
             MusicaMenu.volume -= 0.0001f;
-            GameObject.Find("Main Camera").transform.Translate(0f, 0f, 0.001f);
+            GameObject.Find("Main Camera").transform.Translate(0f, 0f, 0.005f);
 
             GameObject.Find("Voltar_Button").transform.position = new Vector3(1000f, 0f, 0f);
             GameObject.Find("CREDITOS").transform.position = new Vector3(1000f, 0f, 0f);
@@ -59,7 +66,10 @@ public class TRANSITION_BUTTON : MonoBehaviour
                 }
             }
 
-        }
+        }else if(sair)
+		{
+			Application.Quit();
+		}
 
     }
 
@@ -67,6 +77,10 @@ public class TRANSITION_BUTTON : MonoBehaviour
     {
         if (this.gameObject.name == "Jogar_Button") { jogar = true; } else if (this.gameObject.name == "Creditos_Button") { creditos = true; } else{voltar = true; }
         
+		if(this.gameObject.name == "Sair_Button")
+		{
+			sair = true;
+		}
         
     }
 }

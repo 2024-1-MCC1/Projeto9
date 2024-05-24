@@ -16,6 +16,14 @@ public class PRINCIPIO : MonoBehaviour
 
     private int MENCIONATUTORIAL = 0;
     private string auxMensagem = "";
+	
+	private GameObject Seta;
+	
+	void Start()
+	{
+		Seta = GameObject.Find("SETA");
+		//Seta.SetActive(false);
+	}
 
     // Start is called before the first frame update
 
@@ -248,6 +256,7 @@ public class PRINCIPIO : MonoBehaviour
                             JOGADOR = null;
                             auxJOVEM = true;
                             MENCIONATUTORIAL = 3;
+							Seta.SetActive(true);
                         }
                         else
                         {
