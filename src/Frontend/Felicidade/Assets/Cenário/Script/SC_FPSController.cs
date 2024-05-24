@@ -1,4 +1,4 @@
-using System.Collections;
+    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -42,8 +42,6 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
-        
-        
         if (MODOCARREIRA == false)
         {
             walkingSpeed = 0.5f * (PROPRIEDADES_JOGADOR.energia / 200) + 0.5f - (PROPRIEDADES_JOGADOR.PESOATUAL/(PROPRIEDADES_JOGADOR.constPeso + PROPRIEDADES_JOGADOR.PESOLIMITE)) * 0.2f;

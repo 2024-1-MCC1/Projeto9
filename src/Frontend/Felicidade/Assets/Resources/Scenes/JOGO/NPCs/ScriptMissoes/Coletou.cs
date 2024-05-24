@@ -40,6 +40,7 @@ public class Coletou : MonoBehaviour, IInteractable
 	
 	void Update()
 	{
+
 		if(this.gameObject.tag == "Arvore")
 		{
 		if((SistemaNPC.selecionarOqueFazer == 1 || SistemaNPCSecundario.selecionarOqueFazer == 1) && (missao.idMissaoAtual[SistemaNPC.tipoMissao] == idMissao || missao.idMissaoAtual[SistemaNPCSecundario.tipoMissao] == idMissao))
@@ -50,7 +51,6 @@ public class Coletou : MonoBehaviour, IInteractable
 		
 		if(comecarEncher && Input.GetKey(KeyCode.E))
 		{
-			Debug.Log("É pra encher");
 			fertilizar.SetActive(true);
 			GameObject.Find("Fertilizar").GetComponent<Image>().fillAmount += velocidadePreenchimento * Time.deltaTime;
 			if(GameObject.Find("Fertilizar").GetComponent<Image>().fillAmount >=1f)

@@ -26,6 +26,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
 
     private static float imposto = 100;
     private static float tempoParaPagarImposto = 800;
+    private static int mensagem = 1;
 	private static bool taLento = false;
 	private bool entrouNoMenu = true;
 
@@ -56,6 +57,14 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     //----------------------------------------CONVENCER O NPC A ENTRAR NO MOVIMENTO----------------------------------
     public static GameObject CONV;
 
+    //------------------------------------------RECICLAGEM---------------------------
+    public static float RECICLAR = 0f;
+    public static string IMPRECICLA = "";
+    public static int TESTE;
+
+    //------------------------------DICAS----------------------------
+    private int mensagemDE = 0; private bool DE = false;
+
     //private Vector3 posicaoJogador = new Vector3(-222.397598f, 70.8499985f, 9.6088028f);
     // Update is called once per frame
     void Start()
@@ -71,7 +80,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
         JOGADOR = GameObject.Find("Scavenger Variant");
 		MenuPausa = GameObject.Find("MenuPausa");
         MenuPausa.SetActive(false);
-        TELA.SetActive(false);
+        
 
         MISSAO = GameObject.Find("MissaoGameObject").GetComponent<Missoes>();
 
@@ -83,10 +92,47 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
 
     void Update()
     {
-        PESOLIMITE = constPeso * (fome / 100) + 2*(constPeso/3);
+        if (Input.GetKey(KeyCode.P))
+        {
+            respeito = 60f;
+        }
+
+        if (Input.GetKey(KeyCode.H))
+        {
+            RECICLAGE();
+        }
+
+        PESOLIMITE = constPeso * (fome / 100) + 2*(constPeso/3) - RECICLAR;
+
+        if (TELA_CONVERSA.activeSelf)
+        {
+            JOGADOR.GetComponent<Animator>().SetInteger("andando", 0);
+        }
 
         if (SC_FPSController.MODOCARREIRA == false)
         {
+            if (respeito < 0)
+            {
+                respeito = 0;
+            }
+
+            if (mensagem == 0)
+            {
+                mensagem += ORQUESTRA.DICAS($"O tempo passou e tá na hora de pagar 100 Reais para o prefeito Naconta, você ficou com {dinheiro}");
+            }
+
+            if(energia < 50f && ORQUESTRA.DICA.text == "") { DE = true; }
+            if(mensagemDE == 0 && DE)
+            {
+                mensagemDE += ORQUESTRA.DICAS("Se você se mantiver parado, bem alimentado e hidratado, recuperará sua energia rapidamente!");
+            }
+
+
+            if (RECICLAR == 0f && IMPRECICLA != "")
+            {
+                IMPRECICLA = "";
+            }
+
             if (auxConversa)
             {
                 TELA_CONVERSA.SetActive(false);
@@ -113,7 +159,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
             {
                 energia += ((fome / 100) * 0.5f + (sede / 100) * 0.5f) * Time.deltaTime * 5;
             }
-
+            
             if (Input.GetKeyDown(KeyCode.Q) && TELA_CONVERSA.activeSelf == false)
             {
       
@@ -138,12 +184,12 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
 
                 ATRIBUTOSNATELA();
               
-                //if (MISSAO.missaoLayout[0].activeSelf || MISSAO.missaoLayout[1].activeSelf || PESOATUAL > PESOLIMITE) { SETA.SetActive(true); } else { SETA.SetActive(false); }
+                if (MISSAO.missaoLayout[0].activeSelf || MISSAO.missaoLayout[1].activeSelf || PESOATUAL > PESOLIMITE) { SETA.SetActive(true); } else { SETA.SetActive(false); }
 
             }
             else if (SETA.activeSelf)
             {
-                SETA.SetActive(true);
+                SETA.SetActive(false);
             }
 
             if (OBJETIVO != null)
@@ -214,7 +260,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
         {
             tempoParaPagarImposto += Time.time;
             dinheiro -= imposto;
-            ORQUESTRA.DICAS($"O tempo passou e tá na hora de pagar 100 Reals para o prefeito Naconta, você ficou com {dinheiro}");
+            mensagem = 0;
         }
 
     }
@@ -232,7 +278,7 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     public void ATRIBUTOSNATELA()
     {
 
-        GameObject.Find("PESO").GetComponent<TMP_Text>().text = "PESO     " + (int)PESOATUAL + "/" + (int) PESOLIMITE + "KG";
+        GameObject.Find("PESO").GetComponent<TMP_Text>().text = "PESO     " + (int)PESOATUAL + "/" + (int) PESOLIMITE + "KG" + "     " + IMPRECICLA;
         GameObject.Find("DINHEIROTEXT").GetComponent<TMP_Text>().text = dinheiro.ToString();
         GameObject.Find("PREENCHIMENTOFOME").GetComponent<RectTransform>().localPosition = new Vector3(0f, (fome / 100.0f) * 100 - 100, 0f);
         GameObject.Find("PREENCHIMENTO_SEDE").GetComponent<RectTransform>().localPosition = new Vector3(0f, (sede / 100.0f) * 100 - 100, 0f);
@@ -243,23 +289,46 @@ public class PROPRIEDADES_JOGADOR : MonoBehaviour
     }
 	public void MenuPausado()
 	{
-		if(Input.GetKey(KeyCode.Return))
+		Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+		if(Input.GetButtonDown("Fire1"))
 		{
 			entrouNoMenu = true;
 			MenuPausa.SetActive(false);
 			Time.timeScale = 1;
 			Cursor.lockState = CursorLockMode.Locked;
 			Cursor.visible = false;
-		}else if(Input.GetKey(KeyCode.F))
+		}else if(Input.GetButtonDown("Fire1") && EventSystem.current.currentSelectedGameObject.name == "VoltaMenu")
 		{
 			entrouNoMenu = true;
 			MenuPausa.SetActive(false);
 			Time.timeScale = 1;
 			SceneManager.LoadScene("Menu");
-			Cursor.lockState = CursorLockMode.None;
-			Cursor.visible = true;
 		}
 	}
 
+    public static void RECICLAGE()
+    {
+        TESTE = UnityEngine.Random.Range(0,4);
+        if(TESTE == 0)
+        {
+            RECICLAR = UnityEngine.Random.Range(8, 15);
+            IMPRECICLA = "*METAIS*          -" + RECICLAR +"KG";
+        }else if (TESTE == 1)
+        {
+            RECICLAR = UnityEngine.Random.Range(8, 15);
+            IMPRECICLA = "*PLÁSTICOS*          -" + RECICLAR + "KG";
+        }
+        else if (TESTE == 2)
+        {
+            RECICLAR = UnityEngine.Random.Range(8, 15);
+            IMPRECICLA = "*PAPÉIS*          -" + RECICLAR + "KG";
+        }
+        else if (TESTE == 3)
+        {
+            RECICLAR = UnityEngine.Random.Range(8, 15);
+            IMPRECICLA = "*VIDROS*          -" + RECICLAR + "KG";
+        }
+    }
 
 }

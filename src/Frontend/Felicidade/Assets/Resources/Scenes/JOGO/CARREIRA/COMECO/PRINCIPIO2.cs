@@ -21,7 +21,6 @@ public class PRINCIPIO2 : MonoBehaviour
         JOVEM = GameObject.Find("JOVEM_ENTRAR");
         JOVEM.SetActive(false);
         ORQUESTRA.REINICIAR();
-
     }
 
     // Update is called once per frame
@@ -53,7 +52,7 @@ public class PRINCIPIO2 : MonoBehaviour
                 }
                 else
                 {
-                    ORQUESTRA.CICLO_TEXTO();
+                    
                     Debug.Log(ORQUESTRA.guiaPALAVRAS);
                     if (ORQUESTRA.guiaPALAVRAS == 13)
                     {
@@ -64,9 +63,13 @@ public class PRINCIPIO2 : MonoBehaviour
                         PROPRIEDADES_JOGADOR.MISSAO.tipoDeMissao[0] = 1;
                         PROPRIEDADES_JOGADOR.MISSAO.Missao();
                         NPCsFamiliar.SetActive(true);
-                        ORQUESTRA.DICAS("Você recebeu uma missão! PRESSIONE 'Q' para visualizar seu objetivo.");
                         ORQUESTRA.REINICIAR();
                         ORQUESTRA.SEQUENCIA[1] = true;
+
+                    }
+                    else
+                    {
+                        ORQUESTRA.CICLO_TEXTO();
                     }
                 }
             }
@@ -86,9 +89,21 @@ public class PRINCIPIO2 : MonoBehaviour
 
                     ORQUESTRA.guiaPALAVRAS = 0;
                     ORQUESTRA.SEQUENCIA[2] = true;
+                }else if(AVANCADICAS == 2)
+                {
+                    AVANCADICAS = 0;
                 }
 
             }
+            else
+            {
+                if(AVANCADICAS == 0)
+                {
+                    AVANCADICAS += ORQUESTRA.DICAS("Você recebeu uma missão! PRESSIONE 'Q' para visualizar seu objetivo.")*2;
+                }
+                
+            }
+
             if(ORQUESTRA.SEQUENCIA[2] == true && (ORQUESTRA.SEQUENCIA[3] == false || ORQUESTRA.guiaPALAVRAS == 6))
             {
                 ORQUESTRA.CICLO_TEXTO();
@@ -98,6 +113,7 @@ public class PRINCIPIO2 : MonoBehaviour
                     PROPRIEDADES_JOGADOR.MISSAO.tipoMissaoAtual = 0;
                     PROPRIEDADES_JOGADOR.MISSAO.textoTituloMissao[0] = "Entre no Movimento";
                     PROPRIEDADES_JOGADOR.MISSAO.textoObjetivoMissao[0] = "Fale com O JOVEM";
+                    PROPRIEDADES_JOGADOR.MISSAO.progressoMissao[0] = 0;
                     PROPRIEDADES_JOGADOR.MISSAO.objetivoFinalMissao[0] = 1;
                     PROPRIEDADES_JOGADOR.MISSAO.tipoDeMissao[0] = 1;
                     PROPRIEDADES_JOGADOR.MISSAO.Missao();
@@ -109,7 +125,7 @@ public class PRINCIPIO2 : MonoBehaviour
             }
             if (ORQUESTRA.SEQUENCIA[3] == true)
             {
-
+                LIXAO.NPCs.SetActive(true);
                 ORQUESTRA.COMECO2 = false;
                 ORQUESTRA.REINICIAR();
             }

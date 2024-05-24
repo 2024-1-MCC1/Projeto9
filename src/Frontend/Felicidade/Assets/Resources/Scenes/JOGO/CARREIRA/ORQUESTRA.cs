@@ -7,9 +7,9 @@ using UnityEngine.UI;
 
 public class ORQUESTRA : MonoBehaviour
 {
-    public static bool COMECO = false;
+    public static bool COMECO = true;
     public static bool COMECO2 = false;
-    public static bool LIXAO = false;
+    public static bool LIXAOf = false;
 
 
     public static TMP_Text TEXTO;
@@ -22,7 +22,7 @@ public class ORQUESTRA : MonoBehaviour
 
     public static List<string> PALAVRAS = new List<string>();
 
-    private static TMP_Text DICA;
+    public static TMP_Text DICA;
     public static float tempoT = 0f; //TEMPO DA MENSAGEM DO TUTORIAL
     private static bool auxtempoT = true; //AUXILIA O CICLO DE TEMPO DA MENSAGEM DO TUTORIAL
 
@@ -54,7 +54,10 @@ public class ORQUESTRA : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(PROPRIEDADES_JOGADOR.respeito > 40f && LIXAO.comecaAux == false)
+        {
+            LIXAOf = true;
+        }
     }
 
     public static void REINICIAR()
@@ -111,11 +114,11 @@ public class ORQUESTRA : MonoBehaviour
         //------------ARTICULA tempoPALAVRAS---------------
         if (auxESMAECER)
         {
-            tempoPALAVRAS += Time.deltaTime;
+            tempoPALAVRAS += Time.deltaTime * 2;
         }
         else
         {
-            tempoPALAVRAS -= Time.deltaTime;
+            tempoPALAVRAS -= Time.deltaTime * 2;
 
         }
         //--------------------------------------------------

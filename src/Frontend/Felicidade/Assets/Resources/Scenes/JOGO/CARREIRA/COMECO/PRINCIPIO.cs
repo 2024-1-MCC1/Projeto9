@@ -16,15 +16,12 @@ public class PRINCIPIO : MonoBehaviour
 
     private int MENCIONATUTORIAL = 0;
     private string auxMensagem = "";
-	
-	private GameObject Seta;
-	
-	void Start()
-	{
-		Seta = GameObject.Find("SETA");
-		//Seta.SetActive(false);
-	}
 
+    private bool CAIR = false;
+
+
+    //---------------------VARIÁVEL AUXILIAR PARA CORREÇÃO DE BUGS-----------------------
+    private float TEMPOt = 0f;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -46,7 +43,7 @@ public class PRINCIPIO : MonoBehaviour
             ORQUESTRA.PALAVRAS.Insert(2,"[...] desde aquela tragédia!");
             ORQUESTRA.PALAVRAS.Insert(3, "Passaram-se tempos difíceis para todos nós desde que abandonamos a cidade.");
             ORQUESTRA.PALAVRAS.Insert(4, "Gostaria de sentir ao menos um último suspiro da grandeza desse lugar.");
-            ORQUESTRA.PALAVRAS.Insert(5, "Antes que..."); //COLOCAR ÁUDIO DE TOSSE 
+            ORQUESTRA.PALAVRAS.Insert(5, "Antes que..."); //ÁUDIO DE TOSSE 
             ORQUESTRA.PALAVRAS.Insert(6, "Anoiteceu rápido. Nem me dei conta da passagem do tempo.");  
             ORQUESTRA.PALAVRAS.Insert(7, "Talvez tenha sido pela anciedade de chegar logo.");
             ORQUESTRA.PALAVRAS.Insert(8, "");
@@ -54,9 +51,11 @@ public class PRINCIPIO : MonoBehaviour
                 ORQUESTRA.PALAVRAS.Insert(10, "");
                 ORQUESTRA.PALAVRAS.Insert(11, "");
 
+                
+
                 GameObject.Find("NPCs").SetActive(false);
 
-                //ORQUESTRA.guiaPALAVRAS = 5;
+                ORQUESTRA.guiaPALAVRAS = 0;
 
             }
             
@@ -67,7 +66,7 @@ public class PRINCIPIO : MonoBehaviour
                 {
 
                     JOGADOR.GetComponent<CharacterController>().enabled = false;
-                    JOGADOR.transform.position = new Vector3(-577f, 70f, 10.19f);
+                    JOGADOR.transform.position = new Vector3(-577f, 70f, 10.19f); //-577
                     JOGADOR.GetComponent<CharacterController>().enabled = true;
                     ORQUESTRA.SEQUENCIA[0] = true;
 
@@ -103,8 +102,9 @@ public class PRINCIPIO : MonoBehaviour
                     }
 
                     if (ORQUESTRA.guiaPALAVRAS > 6)
-                    { 
-                        if (MENCIONATUTORIAL == 0)
+                    {
+                        TEMPOt += Time.deltaTime;
+                        if (MENCIONATUTORIAL == 0 && TEMPOt > 0.5f)
                         {
                             MENCIONATUTORIAL += ORQUESTRA.DICAS("PRESSIONE 'Q' para exibir os RECURSOS DA TELA.");
                         }
@@ -121,10 +121,11 @@ public class PRINCIPIO : MonoBehaviour
 
                             if (Input.GetKey(KeyCode.LeftShift))
                             {
-                                auxMensagem = "Enquanto você corre, você perde energia. E sua velocidade é função da sua energia.";
+                                auxMensagem = "Enquanto você corre, você perde energia. E sua energia é função da sua velocidade.";
                            
                             }
                         }
+                        
                     }
 
                 }
@@ -143,7 +144,7 @@ public class PRINCIPIO : MonoBehaviour
                     ORQUESTRA.PALAVRAS.Insert(4, "Bem me lembro de como antes mesmo do assunto de sustentabilidade vir à tona, nossa cidade já era exemplo.");
                     ORQUESTRA.PALAVRAS.Insert(5, "Até o conceito de 'autossustentabilidade' surgiu aqui.");
                     ORQUESTRA.PALAVRAS.Insert(6, "");
-                    ORQUESTRA.PALAVRAS.Insert(7, "Nossa, que cheiro pesado!");
+                    ORQUESTRA.PALAVRAS.Insert(7, "Nossa... Que cheiro pesado!");
                     ORQUESTRA.PALAVRAS.Insert(8, "Eu não...");
                     ORQUESTRA.PALAVRAS.Insert(9, "Eu não consigo respirar!");
                     ORQUESTRA.PALAVRAS.Insert(10, "");
@@ -151,32 +152,48 @@ public class PRINCIPIO : MonoBehaviour
 
                     ORQUESTRA.SEQUENCIA[2] = true;
                 }
+                else
+                {
+                    if (MENCIONATUTORIAL == 1)
+                    {
+                        SC_FPSController.BLOQUEIACORRIDA = true;
+                        if (auxMensagem == "")
+                        {
+                            auxMensagem = "PRESSIONE 'SHIFT' para CORRER.";
 
-                
+                        }
+
+                        MENCIONATUTORIAL += ORQUESTRA.DICAS(auxMensagem);
+
+                        if (Input.GetKey(KeyCode.LeftShift))
+                        {
+                            auxMensagem = "Enquanto você corre, você perde energia. E sua energia é função da sua velocidade.";
+
+                        }
+                    }
+                }
+
+                Debug.Log(MENCIONATUTORIAL);
             }
             if (ORQUESTRA.SEQUENCIA[2] && ORQUESTRA.SEQUENCIA[3] != true)
             {
-                ORQUESTRA.CICLO_TEXTO();
-                if (ORQUESTRA.guiaPALAVRAS == 8 && JOGADOR.GetComponent<CharacterController>().enabled)
+                if(ORQUESTRA.guiaPALAVRAS != 11) { ORQUESTRA.CICLO_TEXTO(); }
+                
+                if (ORQUESTRA.guiaPALAVRAS == 8 && CAIR == false)
                 {
                     JOGADOR.GetComponent<SC_FPSController>().enabled = false;
                     JOGADOR.GetComponent<Animator>().SetInteger("andando", 0);
+                    CAIR = true;
                     escurecer = true;
 
                 }else if (ORQUESTRA.guiaPALAVRAS == 11 && ORQUESTRA.escuro.color.a > 0.6f && ORQUESTRA.escuro.color.a < 1f)
                 {
-                    JOGADOR.GetComponent<CapsuleCollider>().enabled = false;
-                    JOGADOR.GetComponent<BoxCollider>().enabled = true;
-
-                    JOGADOR.GetComponent<Rigidbody>().freezeRotation = false;
-                    JOGADOR.GetComponent<Rigidbody>().AddForce(0.1f, 0f, 0.1f);
-                    JOGADOR.GetComponent<Rigidbody>().useGravity = true;
                     ESCURECER += Time.deltaTime * 0.08f;
 
                 }
                 if (escurecer && ORQUESTRA.escuro.color.a < 1f)
                 {
-                    ESCURECER += Time.deltaTime * 0.02f;
+                    ESCURECER += Time.deltaTime * 0.06f;
                     ORQUESTRA.escuro.color = new Color(0f, 0f, 0f, ESCURECER);
                 }
                 if(ORQUESTRA.escuro.color.a >= 1f)
@@ -191,11 +208,11 @@ public class PRINCIPIO : MonoBehaviour
                 {
                     ORQUESTRA.CICLO_TEXTO();
                 }
-                
-                
+
+                Debug.Log(ORQUESTRA.guiaPALAVRAS);
                 if (ORQUESTRA.escuro.color.a > 0 && ORQUESTRA.guiaPALAVRAS > 11)
                 {
-                    ESCURECER -= Time.deltaTime * 0.04f;
+                    ESCURECER -= Time.deltaTime * 0.06f;
                     ORQUESTRA.escuro.color = new Color(0f, 0f, 0f, ESCURECER);
                     if (ORQUESTRA.SEQUENCIA[4] != true)
                     {
@@ -208,20 +225,17 @@ public class PRINCIPIO : MonoBehaviour
                         JOVEM.SetActive(true);
                         JOVEM.transform.position = new Vector3(JOGADOR.transform.position.x, JOGADOR.transform.position.y, JOGADOR.transform.position.z);
                         JOVEM.GetComponent<NPC_IA>().andando = true;
-                        JOVEM.GetComponent<NPC_IA>().velocidade = 0.5f;
+                        JOVEM.GetComponent<NPC_IA>().velocidade = 0.1f;
+                        CAIR = false;
                     }
                 }
                 else if(ORQUESTRA.escuro.color.a <= 0)
                 {
                     
-                    JOGADOR.GetComponent<CapsuleCollider>().enabled = true;
-                    JOGADOR.GetComponent<BoxCollider>().enabled = false;
-
-                    JOGADOR.GetComponent<Rigidbody>().freezeRotation = true;
                     JOGADOR.transform.rotation = Quaternion.Euler(0f, 156.07f, 0f);
-                    JOGADOR.GetComponent<Rigidbody>().useGravity = false;
 
                     JOGADOR.GetComponent<SC_FPSController>().enabled = true;
+                    
                     escurecer = false;
                     ORQUESTRA.SEQUENCIA[5] = true;
                 }
@@ -237,7 +251,7 @@ public class PRINCIPIO : MonoBehaviour
 
                     JOGADOR.transform.LookAt(new Vector3(JOVEM.transform.position.x, JOGADOR.transform.position.y, JOVEM.transform.position.z));
                     JOVEM.GetComponent<NPC_IA>().Interact();
-                    
+                    JOVEM.GetComponent<Animator>().SetInteger("andando", 0);
                     ORQUESTRA.SEQUENCIA[6] = true;
 
                 } 
@@ -256,12 +270,13 @@ public class PRINCIPIO : MonoBehaviour
                             JOGADOR = null;
                             auxJOVEM = true;
                             MENCIONATUTORIAL = 3;
-							Seta.SetActive(true);
                         }
                         else
                         {
                             JOVEM.GetComponent<NPC_IA>().cansaco = 10f;
                             JOVEM.GetComponent<NPC_IA>().velocidade = 3f;
+                            JOVEM.GetComponent<Animator>().SetInteger("andando", 1);
+                            JOVEM.GetComponent<Animator>().speed = 1.5f;
                         }
                     }
                     
@@ -281,9 +296,7 @@ public class PRINCIPIO : MonoBehaviour
                 ORQUESTRA.REINICIAR();
                 ORQUESTRA.COMECO2 = true; //INICIA A SEGUNDA PARTE DO INICIO DA HISTÓRIA!
             }
-            
         }
     }
-
     //ORQUESTRA.PALAVRAS.Clear();
 }

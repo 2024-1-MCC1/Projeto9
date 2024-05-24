@@ -11,11 +11,10 @@ public class SistemaNPCSecundario : MonoBehaviour
     public int objetivoFinalMissaoInte = 0;//Inserir a quantidade de tarefas que o jogador tem que alcançar para concluir a missão
     public float dinheiroMissao;
 	public float respeitoGanho;
-	public float respeitoNecessario;
     public int idMissao; //Usado para identificar a missão 
     public int selecionarOqueFazer;//"Coleta de Lixo"(0), "Arborização"(1), "Varrer as ruas"(0)
 	public float tempoParaOFinal;
-	public bool eAleatoria = false;
+	public static bool eAleatoria = false;
 
 	public int tipoMissao = 1; //(0) é para missões principais e (1) é para missões secundarias
     private SistemaNPCPrincipal sistemaNPCPrincipal;
@@ -28,21 +27,21 @@ public class SistemaNPCSecundario : MonoBehaviour
 
     void Update()
     {
+        
         if (idMissao == quest.idMissaoAtual[quest.tipoMissaoAtual] && quest.acabouAMissao[quest.tipoMissaoAtual])//Verifica se o ID da missão desse script é igual ao ID da missão no script "Missoes", também verifica se a bool missão acabou é verdadeira
         {
             this.gameObject.GetComponent<SistemaNPCSecundario>().enabled = false;//Desativa o Script no gameobject em que ele está inserido
         }
-		if(eAleatoria && respeitoNecessario == PROPRIEDADES_JOGADOR.respeito)
+		if(eAleatoria && PROPRIEDADES_JOGADOR.MISSAO.missaoLayout[1].activeSelf == false)
 		{
-			InteragiuSecundario();
-		}
+            InteragiuSecundario();
+
+        }
+
     }
 
     public void InteragiuSecundario()
     {
-		Debug.Log("O 2 funcionou");
-        if (sistemaNPCPrincipal.comecouPrincipal)
-        {
 			quest.respeito[tipoMissao] = respeitoGanho;
 			quest.tempoParaFinal = tempoParaOFinal;
             quest.dinheiro[tipoMissao] = dinheiroMissao;
@@ -54,7 +53,6 @@ public class SistemaNPCSecundario : MonoBehaviour
             quest.objetivoFinalMissao[tipoMissao] = objetivoFinalMissaoInte;
             quest.idMissaoAtual[tipoMissao] = idMissao;
             quest.Missao();
-        }
     }
 
     public void Coletou()

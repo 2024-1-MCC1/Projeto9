@@ -5,7 +5,7 @@ using TMPro;
 public class Missoes : MonoBehaviour
 {
     public GameObject[] missaoLayout;//Layout para fazer call out
-    public GameObject missaoConcluida;
+    public static GameObject missaoConcluida;
 	public GameObject missaoFalhou;
     //public GameObject desentupirLayout;
 
@@ -29,9 +29,8 @@ public class Missoes : MonoBehaviour
 	
 	private GameObject Tempo;
 	private bool temTempo = false;
-	private AudioSource MissaoConcluida;
+	public static AudioSource MissaoConcluida;
 	private AudioSource GameOver;
-	private GameObject SETA;
 
     public int[] tipoDeMissao = new int[2]; //(1) para missões de conversa
 
@@ -53,10 +52,11 @@ public class Missoes : MonoBehaviour
 		MissaoConcluida = GameObject.Find("MissaoConcluidaSound").GetComponent<AudioSource>();
 		GameOver = GameObject.Find("GameOverSound").GetComponent<AudioSource>();
         Tempo.SetActive(false);
-		SETA = GameObject.Find("SETA");
         //desentupirLayout.SetActive(false);
         missaoLayout[0].SetActive(false);
-        missaoLayout[1].SetActive(false);
+        
+        missaoConcluida = GameObject.Find("MissãoConcluida");
+
         missaoConcluida.SetActive(false);
 		missaoFalhou.SetActive(false);
     }
@@ -74,7 +74,7 @@ public class Missoes : MonoBehaviour
 			PROPRIEDADES_JOGADOR.respeito -= respeito[tipoMissaoAtual];
             Tempo.SetActive(false);
             missaoFalhou.SetActive(true);
-            missaoLayout[1].SetActive(false);
+            if(CICLICIDADE.ATIVO == false) { missaoLayout[1].SetActive(false); }
             Invoke("MissaoFalhou", delayInSeconds);
             temTempo=false;
             tempoParaFinal = 0;
@@ -91,14 +91,6 @@ public class Missoes : MonoBehaviour
         }
         if (progressoMissao[tipoMissaoAtual] == objetivoFinalMissao[tipoMissaoAtual])
         {
-			if(tipoMissaoAtual == 0 && idMissaoAtual[0] == 9)
-			{
-				GameObject.Find("Lixo").SetActive(false);
-			}
-			if(tipoMissaoAtual == 0)
-			{
-				SETA.SetActive(true);
-			}
 			MissaoConcluida.Play(0);
 			taNaHoraPro = true;
 			temTempo=false;
@@ -108,7 +100,6 @@ public class Missoes : MonoBehaviour
             missaoConcluida.SetActive(true);
             PROPRIEDADES_JOGADOR.dinheiro += dinheiro[tipoMissaoAtual];
 			PROPRIEDADES_JOGADOR.respeito += respeito[tipoMissaoAtual];
-			PROPRIEDADES_JOGADOR.pessoasNoMovimento ++;
         }
         PROPRIEDADES_JOGADOR.REINICIAR_SETA();
     }
@@ -126,4 +117,9 @@ public class Missoes : MonoBehaviour
         missaoFalhou.SetActive(false);
         acabouAMissao[1] = true;
     }
+
+    /*public static void AUXILIAR()
+    {
+        missaoLayout[1].SetActive(true);
+    }*/
 }

@@ -10,12 +10,14 @@ public class LIXAO : MonoBehaviour
     private NPC_IA PREFEITO;
     private GameObject CAMERA;
 
-    private int escur = 0; //ALTERAR ESSE VALOR PARA 0 APÓS AS MODIFICAÇÕES!
-    public bool comecaAux = false;
+    private int escur = 0; 
+    public static bool comecaAux = false;
 
     private GameObject CAMINHAO;
     private GameObject MAUCHE;
-    
+
+    public static GameObject NPCs;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,12 +29,13 @@ public class LIXAO : MonoBehaviour
         CAMINHAO.SetActive(false);
         MAUCHE = GameObject.Find("MAUCHEIRO");
         MAUCHE.SetActive(false);
+        NPCs = GameObject.Find("NPCs");
     }
 
     // Update is called once per frame
     void Update()
     {
-        INICIAR = ORQUESTRA.LIXAO;
+        INICIAR = ORQUESTRA.LIXAOf;
 
         if (INICIAR)
         {
@@ -69,6 +72,7 @@ public class LIXAO : MonoBehaviour
                     {
                         
                         escur += ORQUESTRA.ESCURECER(false);
+
                     }
                     if (PROPRIEDADES_JOGADOR.TELA_CONVERSA.activeSelf == false && escur == 3)
                     {
@@ -81,7 +85,7 @@ public class LIXAO : MonoBehaviour
                         ORQUESTRA.REINICIAR();
                         SC_FPSController.MODOCARREIRA = false;
 
-                        ORQUESTRA.LIXAO = false;
+                        ORQUESTRA.LIXAOf = false;
                         escur = 5;
                     }
 
@@ -96,12 +100,14 @@ public class LIXAO : MonoBehaviour
         }
         else if (escur == 5)
         {
+            NPCs.SetActive(false);
             escur += ORQUESTRA.ESCURECER(false);
         }else if(escur == 6)
         {
             escur += ORQUESTRA.DICAS("Por participar do movimento do JOVEM, automaticamente você está responsável por limpar o lixão.");
         }else if(escur == 7)
         {
+            PROPRIEDADES_JOGADOR.MISSAO.progressoMissao[0] = 0;
             PROPRIEDADES_JOGADOR.MISSAO.tipoMissaoAtual = 0;
             PROPRIEDADES_JOGADOR.MISSAO.textoTituloMissao[0] = "Ajude a limpar o LIXÃO da cidade!";
             PROPRIEDADES_JOGADOR.MISSAO.textoObjetivoMissao[0] = "Carregue o caminhão de lixo";
@@ -119,6 +125,7 @@ public class LIXAO : MonoBehaviour
         {
             if(PROPRIEDADES_JOGADOR.MISSAO.missaoLayout[0].activeSelf == false)
             {
+                NPCs.SetActive(true);
                 escur += ORQUESTRA.DICAS("Parabéns! Você esvaziou o lixão da cidade! A partir de agora, o caminhão será responsável por descartar todo o lixo recolhido.");
                 LIBERADOENCA = true;
                 CAMMIN.HISTORIA = false;

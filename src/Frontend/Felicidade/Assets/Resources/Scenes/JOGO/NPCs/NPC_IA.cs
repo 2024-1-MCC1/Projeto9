@@ -11,7 +11,6 @@ public class NPC_IA : MonoBehaviour, IInteractable
     public string[] dialogo = new string[3];
     public string[] falante = new string[3];
 	public bool temMissao = false;
-	public bool missaoDePegarQuest = false;
 	public bool anda = true;
 	public int ultimaMissao1ou2 = 1;
 
@@ -23,7 +22,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
 
     private GameObject JOGADOR;
     //-------------VARIÁVEIS PARA O MOVIMENTO DA IA---------------------------
-    public float velocidade = 1f;
+    public float velocidade = 0.5f;
 	private float cont = 0f;
     private int direction = 0;
     public float cansaco = 0f; //DEFINE O TEMPO DE CAMINHADA DO NPC
@@ -46,14 +45,12 @@ public class NPC_IA : MonoBehaviour, IInteractable
     public int CHANCE = 25;
     public int GATILHO;
     public bool TENTATIVA = false;
-	private GameObject SETA;
 
     //--------------------DOENÇAS-------------------
     private bool LIBERADOENTE = false;
     private bool DOENTE = false;
     public void Interact()
     {
-
         if (PROPRIEDADES_JOGADOR.TELA_CONVERSA.activeSelf == false && this.andamentoDaConversa != -10)
         {
             if(Random.Range(0,101) < CHANCE - 1)
@@ -73,17 +70,18 @@ public class NPC_IA : MonoBehaviour, IInteractable
                     DOENTE = false;
                 }
             }
-
+            
             PROPRIEDADES_JOGADOR.TELA_CONVERSA.SetActive(true);
             PROPRIEDADES_JOGADOR.TELA.SetActive(false);
             Interactor.LEGENDA.SetActive(false);
             this.conversando = true;
             this.andando = false;
-
             SC_FPSController.canMove = false;
-			Time.timeScale = 0;
             if (NPC.gameObject.name != "PREFEITO")
             { NPC.transform.forward = JOGADOR.transform.forward * (-1); } //VIRA O NPC EM DIREÇÃO AO JOGADOR}
+
+            if (NPC.gameObject.name == "JOVEM_ENTRAR")
+            { temMissao = false; } //VIRA O NPC EM DIREÇÃO AO JOGADOR}
 
             if (PROPRIEDADES_JOGADOR.MISSAO.tipoDeMissao[0] == 1 && objetivo)
             {
@@ -98,7 +96,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
         {
             this.andamentoDaConversa = 0;
         }
-        
+
     }
 
     private void Start()
@@ -112,7 +110,6 @@ public class NPC_IA : MonoBehaviour, IInteractable
 
         JOGADOR = GameObject.Find("Scavenger Variant");
         NPC = this.gameObject;
-		SETA = GameObject.Find("SETA");
 		
 		if(anda == false)
 		{
@@ -149,12 +146,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
             //Debug.Log(this.gameObject.name);
             CONVERSANDO();
         }
-		
-		if(temMissao && this.gameObject.GetComponent<SistemaNPCPrincipal>().idMissao == MissaoObjeto.idMissaoAtual[0] + ultimaMissao1ou2)
-		{
-			objetivo = true;
-		}
-		
+
         if(objetivo)
         {
             PROPRIEDADES_JOGADOR.ATRAIR_SETA(this.gameObject);
@@ -178,6 +170,7 @@ public class NPC_IA : MonoBehaviour, IInteractable
 			if(anda)
 			{
 				animator.SetInteger("andando", 1);
+                animator.speed = velocidade/2;
 			}
             cicloAndar = true;
         }
@@ -217,12 +210,6 @@ public class NPC_IA : MonoBehaviour, IInteractable
 
     }
 
-    public static void ATRAIR()
-    {
-        
-    }
-
-
     private void CONVERSANDO()
     {
         if(this.andamentoDaConversa == -10)
@@ -254,18 +241,20 @@ public class NPC_IA : MonoBehaviour, IInteractable
                     if (MissaoObjeto.idMissaoAtual[0] == this.gameObject.GetComponent<SistemaNPCPrincipal>().idMissao - ultimaMissao1ou2 && MissaoObjeto.taNaHoraPro == true)
                     {
                         Debug.Log("foimeo");
-						objetivo = false;
-						if(missaoDePegarQuest == false){SETA.SetActive(false);}
                         sistemaNPCPrincipal.Interacao();
                         temMissao = false;
                     }
                 }
                 SC_FPSController.canMove = true;
-				Time.timeScale = 1;
                 if (this.anda) { this.andando = true; }
                 this.conversando = false;
                 this.andamentoDaConversa = -10;
                 this.pausaRegistroDialogo = -10; //UM VALOR QUALQUER
+
+                if (this.gameObject.name == "JOVEM_ENTRAR")
+                {
+                    CICLICIDADE.ATIVO = true;
+                }
                 PROPRIEDADES_JOGADOR.TELA_CONVERSA.SetActive(false);
             }
         }
