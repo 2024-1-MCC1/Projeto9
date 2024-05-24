@@ -54,7 +54,7 @@ Felicidade é um jogo que busca conscientizar sobre o a importância de polític
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
-Extraia os arquivos RAR na pasta executáveis
+Extraia o arquivo Zip na pasta executáveis
 Encontre o TesteFecapJogo.exe na pasta e execute-o como qualquer outro programa.
 
 ## 💻 Configuração para Desenvolvimento
