@@ -72,8 +72,8 @@ Para abrir este projeto você necessita das seguintes ferramentas:
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-*24/05/2024
-    *Versão Final do projeto
+* 24/05/2024
+    * Versão Final do projeto
 * 16/05/2024
     * Cenário engrandecido
     * Mais eventos da história adicionados
